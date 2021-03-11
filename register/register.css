@@ -1,0 +1,248 @@
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+.header {
+  height: 100px;
+  /* background-color:rgb(153, 221, 195); */
+}
+.header a {
+  display: inline-block;
+  width: 124px;
+  height: 61px;
+  margin-top: 20px;
+  background: url(../comm/images/all.png) -309px -77px;
+}
+.header .day_res {
+  width: 282px;
+  height: 24px;
+  float: right;
+  margin-top: 38px;
+  background-color: pink;
+  background: url(../comm/images/all.png) -4px -38px;
+}
+.login {
+  height: 650px;
+  /* background-color: rgba(114, 138, 218, 0.185); */
+}
+.c-body {
+  min-width: 1000px;
+  background: url(images/bg.jpg) no-repeat;
+  background-position: top center;
+}
+.c-body .login_box {
+  width: 360px;
+  /* 不给盒子高度,自己撑开 */
+  /* height: 433px; */
+  border-radius: 2px;
+  float: right;
+  margin-top: 50px;
+  background-color: #fff;
+}
+.login_box .top {
+  display: flex;
+  border-bottom: 1px solid #e6e6e6;
+}
+.active {
+  color: #f10180;
+}
+.login_box .top a {
+  flex: 1 0 auto;
+  display: block;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 800;
+}
+.login_box .top a:hover {
+  color: #f10180;
+}
+.login_box .top a:first-child::after {
+  content: '|';
+  font-weight: 400;
+  line-height: 50px;
+  float: right;
+  color: #ccc;
+}
+/* 二维码登录 */
+.login .login_middle {
+  padding: 36px 0;
+  height: 190px;
+  text-align: center;
+  position: relative;
+}
+.login .login_middle img {
+  position: absolute;
+  left: 94px;
+  top: 35px;
+  padding: 10px;
+  border: 1px solid #ece9e9;
+}
+.login .login_middle .phone {
+  position: absolute;
+  right: 40px;
+  top: 25px;
+  width: 120px;
+  height: 192px;
+  float: right;
+  opacity: 0;
+  background: url(../comm/images/all.png) 0px -104px no-repeat;
+}
+.login .qcr_text {
+  text-align: center;
+  font-size: 14px;
+}
+/* 账户登陆 */
+.login .contact_login .ipt {
+  width: 100%;
+}
+.footer {
+  height: 77px;
+  text-align: center;
+  line-height: 77px;
+  color: #666;
+}
+.login .contact_login .ipt {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+}
+.login .contact_login .ipt .code {
+  height: 40px;
+  width: 300px;
+  display: flex;
+  margin-top: 10px;
+  line-height: 40px;
+  justify-content: space-between;
+}
+.login .contact_login .ipt .code a {
+  float: 1;
+}
+.login .contact_login .ipt .code a:hover {
+  color: #f10180;
+}
+.login .contact_login .ipt button {
+  cursor: pointer;
+  outline: none;
+}
+.login .contact_login .ipt button:hover {
+  transition: all 0.5s;
+  opacity: 0.8;
+  background-color: #f10180;
+}
+.login .contact_login .ipt .icon-yonghu,
+.login .contact_login .ipt .icon-mima {
+  font-size: 20px;
+  text-indent: 5px;
+}
+.login .contact_login .vaild {
+  text-align: center;
+  line-height: 28px;
+  height: 28px;
+  width: 300px;
+  margin-top: 20px;
+  background-color: #DFF1F8;
+  border: 1px solid #c5e6f3;
+}
+.login .contact_login .case {
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 300px;
+}
+.login .contact_login .case input {
+  width: 14px;
+  height: 14px;
+  outline: none;
+}
+.login .contact_login .case span {
+  text-indent: 20px;
+  font-size: 13px;
+}
+.login .contact_login .case span a {
+  color: #2472d8;
+}
+.login .contact_login .ipt input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 40px;
+}
+.login .contact_login .ipt {
+  height: 100%;
+}
+.login .contact_login .ipt .text {
+  line-height: 44px;
+  margin-top: 25px;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  width: 298px;
+  height: 44px;
+}
+.login .contact_login .ipt .text span {
+  margin-left: 10px;
+}
+.login .contact_login .ipt .text input {
+  width: 255px;
+  height: 40px;
+  margin-left: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 46px;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  line-height: 46px;
+}
+.login .contact_login .ipt .pwd {
+  line-height: 44px;
+  margin-top: 25px;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  width: 298px;
+  height: 46px;
+  line-height: 46px;
+}
+.login .contact_login .ipt .pwd span {
+  margin-left: 10px;
+}
+.login .contact_login .ipt .pwd input {
+  width: 255px;
+  margin-left: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  outline: none;
+  border: none;
+  height: 46px;
+  line-height: 46px;
+}
+.login .contact_login button {
+  width: 300px;
+  height: 46px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 2px;
+  background-color: #f10180;
+  font-size: 18px;
+  color: #fff;
+  margin: 20px 0;
+  letter-spacing: 10px;
+}
+.login .contact_login .agree {
+  margin-top: 10px;
+  display: none;
+}
+.login .contact_login .numberTip {
+  display: inline-block;
+  color: #f00;
+  font-size: 16px;
+  width: 100%;
+  height: 24px;
+  margin-left: 60px;
+  margin-top: 10px;
+  line-height: 24px;
+}

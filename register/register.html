@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>注册页面</title>
+  <link rel="stylesheet" href="../comm/normalize.css">
+  <link rel="stylesheet" href="./register.css">
+  <link rel="stylesheet" href="../font/iconfont.css">
+</head>
+
+<body>
+  <div class="box">
+    <!-- 头部 -->
+    <header class="header container">
+      <a href="../index/index.html"></a>
+      <div class="day_res">
+
+      </div>
+    </header>
+    <div class="c-body">
+      <div class="login container">
+        <!-- 登陆盒子 -->
+        <div class="login_box">
+          <!-- 手机号登陆,扫码登陆 -->
+          <div class="top">
+            <a href="javascript:;" class="active">用户注册</a>
+            <a href="../index.html" style="font-size: 12px;color: deeppink; font-weight: 400;"><span style="color: #000;">已有账户?</span> 立即登录</a>
+          </div>
+          <div class="contact_login" style="display: block;">
+            <div class="ipt">
+              <div class="text">
+                <span class="icon-yonghu iconfont"></span>
+                <input type="text" placeholder="请输入手机号">
+              </div>
+              <span class="numberTip" style="display: none;">* 请输入正确格式的手机号</span>
+              <div class="vaild">
+               <i class="iconfont icon-wenhao1" style="color: rgb(80, 80, 219);"></i> 请先输入手机号以安全验证
+              </div>
+              <div class="pwd">
+                <span class="icon-mima iconfont"></span>
+                <input type="password" placeholder="请输入密码" class="onepwd">
+              </div>
+              <span class="numberTip" style="display: none;">* 密码格式必须为数字、字母、下划线</span>
+
+              <div class="pwd">
+                <input type="password" placeholder="请再次输入密码" class="oncepwd">
+                <span class="icon-mima iconfont"></span>
+              </div>
+
+              <span class="numberTip" style="display: none;">* 两次密码输入不一致,请重新输入。</span>
+
+              <div class="case">
+                <input type="checkbox" name="" id="">
+                <span>
+                  我已阅读并接受以下条款:<a href="javascript:;">《隐私条款》</a><a href="javascript:;">《唯品支付用户服务协议》</a>
+                </span>
+                <div class="agree" style="color: red;">这是霸王条款,请先同意!</div>
+              </div>
+            
+              <button class="register">立即注册</button>
+            </div>
+                <!-- 微信图标 -->
+      
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="footer container">
+      <span>
+        Copright 2008- 2020 vip.com. AlI Rights Reseved ICP证E:粤B20080329
+      </span>
+    </footer>
+  </div>
+</body>
+<script src="../tools.js"></script>
+<script src="../jquery.min.js"></script>
+
+
+  <!-- 进行手机正则验证 -->
+<script>
+  // 定义一个装手机号和密码验证通过的数组
+  var boolArr = []
+  var bool1,bool2,bool3;
+  // 正则验证函数
+  function validate(str,reg) { 
+    if (reg.test(str)) {
+      return true
+    }else {
+      return false
+    }
+   }
+
+  //  传入Boolean值来判断是否显示提示
+  function showTip(bool,attr) {
+    if (bool) {  
+        // boolArr.push(bool) 
+        attr.css('border','1px solid #0f0')     
+        attr.next().css('display','none')
+      }else {
+        attr.css('border','1px solid #f00')
+        attr.next().css('display','block')
+      }
+  }
+  function show(attr){
+    attr.css('border','1px solid #f00')
+    attr.next().css('display','block')
+  }
+  function hide(attr) {
+    attr.css('border','1px solid #ccc')     
+    attr.next().css('display','none')
+  }
+  var number,password
+
+
+  //  手机号验证
+    $('input:text').bind('input propertychange', function() {
+      var reg = /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/
+      var str = $(this).val().replace(/[, ]/g,'')
+      bool1 = validate(str,reg)
+      showTip(bool1,$(this).parent())
+     
+    });
+    $('input:text').blur(function () { 
+      var str = $(this).val().replace(/[, ]/g,'')
+      if (str == '') {
+        hide($(this).parent())
+      }else if(bool1){
+      number = str
+        $(this).parent().css('border','1px solid #0f0')     
+        $(this).parent().next().css('display','none')
+      }else{
+        show($(this).parent())
+      }
+      // boolArr.splice(0,1)
+     })
+
+
+    //  密码验证规则
+    // console.log(boolArr);
+    
+    $('.onepwd').bind('input propertychange', function() {
+      // 强密码正则的要求是只能由数字，字母组成，不能有特殊符号,并且长度限制在6-16位
+      var reg =  /^(?=.*[a-zA-Z])(?=.*\d)[^]{6,16}$/
+      var str = $(this).val().replace(/[, ]/g,'')
+      bool2 = validate(str,reg)
+      showTip(bool2,$(this).parent())
+      if ($('.oncepwd').val().replace(/[, ]/g,'') === '') {
+        hide($('.oncepwd').parent())
+      }else{
+        bool3 = Boolean($('.onepwd').val().replace(/[, ]/g,'') === $('.oncepwd').val().replace(/[, ]/g,''))
+       showTip(bool3,$('.oncepwd').parent())
+      }
+    })
+
+    $('.onepwd').blur(function () { 
+      var str = $(this).val().replace(/[, ]/g,'')
+      if (str == '') {
+        hide($(this).parent())
+      }else if(bool2){
+        password = str
+        $(this).parent().css('border','1px solid #0f0')     
+        $(this).parent().next().css('display','none')
+      }else{
+        show($(this).parent())
+      }
+     
+
+     })
+    //  重复密码验证
+
+     $('.oncepwd').bind('input propertychange', function() {
+       bool3 =Boolean($('.onepwd').val().replace(/[, ]/g,'') === $('.oncepwd').val().replace(/[, ]/g,''))
+       showTip(bool3,$(this).parent())
+
+      })
+
+      $('.oncepwd').blur(function () { 
+      var str = $(this).val().replace(/[, ]/g,'')
+      if (str == '') {
+        hide($(this).parent())
+      }else if(bool3){
+        $(this).parent().css('border','1px solid #0f0')     
+        $(this).parent().next().css('display','none')
+      }else{
+        show($(this).parent())
+      }
+      // boolArr.pop()
+
+     })
+    //  是否同意条款
+     $(':checkbox').change(function() {
+       if($(this).prop('checked')) {
+        $('.agree').css('display','none')
+       }else {
+        $('.agree').css('display','block')
+       }
+     })
+
+    //  点击注册的时候进行的事件
+     $('.register').click(function() {
+      if (bool1&&bool2&bool3) {
+        if ($(':checkbox').prop('checked')) {
+          // 在这里进行注册的逻辑
+          $.ajax({
+            type: "post",
+            url: "../server/register.php",
+            data: {
+              number:number,
+              password:password
+            },
+            dataType: "json",
+            success: function (res) {
+              console.log(res);
+            }
+          });
+
+
+
+        }else{
+          $('.agree').css('display','block')
+        }
+      }else{
+        console.log('您输入的信息有误,请重新输入');
+      }
+       
+     })
+  
+
+
+
+
+
+
+
+
+
+</script>
+</html>

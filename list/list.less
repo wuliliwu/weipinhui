@@ -1,0 +1,56 @@
+.clearfix::after {
+  content: '';
+  width: 0;
+  height: 100%;
+  clear: both;
+  overflow: hidden;
+}
+
+.filter-groups-cnt {
+  border: 1px solid #ccc;
+}
+.filter-title{ 
+  margin-top: 20px;
+  height: 50px;
+  line-height: 50px;
+  // background-color: red;
+}
+
+
+.filter-server {
+  min-height: 50px;
+  line-height: 50px;
+  display: flex;
+  // .prev {
+  //   float: left;
+  // }
+  .middle {
+    width: 820px;
+    float: right;
+    .btnClass {
+      text-align: center;
+      button {
+        margin: 0 10px;
+      }
+    }
+  }
+  span {
+    // margin-right: 50px;
+    margin-left: 30px;
+    font-size: 12px;
+  }
+  .next {
+    // float: right;
+    // margin-right: 20px;
+    button {
+      width: 60px;
+      height: 30px;
+      outline: none;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      color: rgb(99, 99, 99);
+      font-weight: 800;
+      background-color: rgb(255, 255, 255);
+    }
+  }
+}

@@ -1,0 +1,43 @@
+/* 清楚所有标签的的内外边距 */ 
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,th,td,dl,dd,fieldset,legend,input,textarea,select {
+  margin: 0;
+  padding: 0;
+}
+/* 设置全局默认字体 */
+body,html {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+
+}
+
+/* 取消标签的默认倾斜 */
+i,em {
+  font-style: normal;
+}
+
+/* 取消下划线和找链接默认的字体颜色 */
+a {
+  text-decoration: none;
+  color: #444;
+}
+li {
+  list-style: none;
+}
+input {
+  outline: none;
+}
+img {
+  vertical-align: middle;
+}
+/* 伪元素清除浮动 */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}

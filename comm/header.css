@@ -1,0 +1,244 @@
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+#header {
+  background-color: #f5f5f5;
+}
+#header .cnt {
+  font-size: 13px;
+  line-height: 35px;
+  height: 35px;
+}
+#header .cnt::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#header .cnt span {
+  height: 100%;
+  float: left;
+}
+#header .cnt span i {
+  font-size: 13px;
+  color: #616161;
+  vertical-align: middle;
+}
+#header .cnt ul {
+  float: right;
+}
+#header .cnt ul li {
+  text-align: right;
+  float: left;
+}
+#header .cnt ul li a {
+  color: #797878;
+  margin-left: 20px;
+}
+#header .cnt ul li a em {
+  color: #afafaf;
+  font-size: 10px;
+}
+#header .cnt ul li a:hover {
+  color: #f10180;
+}
+#header .cnt ul li a:hover i {
+  color: #f10180;
+}
+#search {
+  height: 100px;
+  width: 100%;
+}
+#search .cnt {
+  height: 100px;
+  line-height: 100px;
+}
+#search .cnt .logo a {
+  float: left;
+  width: 160px;
+  height: 100px;
+  background: url(http://b.appsimg.com/upload/momin/2020/06/16/82/1592278113502.png) no-repeat;
+  background-size: 100%;
+}
+#search .cnt .day_res {
+  line-height: 100px;
+  float: left;
+  width: 282px;
+  height: 24px;
+  margin-top: 40px;
+  background-size: 100%;
+  background: url(../comm/images/all.png) -4px -38px;
+}
+#search .cnt .lf {
+  float: left;
+  width: 500px;
+  height: 100px;
+}
+#search .cnt .rt {
+  float: left;
+  height: 100px;
+  width: 500px;
+}
+#search .cnt .rt .ipt {
+  position: relative;
+  width: 360px;
+  height: 36px;
+  margin-top: 30px;
+  border: 2px solid #f10180;
+}
+#search .cnt .rt .ipt input[type='text'] {
+  text-indent: 5px;
+  font-size: 14px;
+  border: none;
+  float: left;
+  width: 300px;
+  height: 36px;
+}
+#search .cnt .rt .ipt input[type='text']::-webkit-input-placeholder {
+  text-indent: 14px;
+  font-size: 14px;
+  color: #ccc;
+}
+#search .cnt .rt .ipt .sea {
+  float: right;
+  margin-top: -1px;
+  margin-right: -2px;
+  width: 50px;
+  height: 38px;
+  color: #fff;
+  background-color: #f10180;
+  border: none;
+  outline: none;
+}
+#search .cnt .rt .bag {
+  position: absolute;
+  top: 0;
+  right: -130px;
+  width: 100px;
+  height: 36px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+#search .cnt .rt .bag a {
+  line-height: 36px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.nav_link {
+  height: 43px;
+  width: 1000px;
+}
+.nav_link ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.nav_link ul li {
+  text-align: center;
+  line-height: 43px;
+  padding: 0 20px ;
+}
+.nav_link ul li a {
+  font-size: 16px;
+}
+.nav_link ul li a:hover {
+  color: #f10180;
+}
+#footer {
+  margin-top: 90px;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  background-color: #fcfcfc;
+}
+#footer .nav-link-icon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 140px;
+}
+#footer .nav-link-icon img {
+  width: 80%;
+}
+#footer .nav-link-lis {
+  display: flex;
+}
+#footer .nav-link-lis .dlbox {
+  width: 199px;
+  border-right: 1px solid #eee;
+  padding: 20px;
+}
+#footer .nav-link-lis .dlbox dl {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 22px;
+  color: #666;
+  margin-bottom: 20px;
+}
+#footer .nav-link-lis .dlbox dl dd {
+  line-height: 32px;
+  font-size: 13px;
+  font-weight: 400;
+}
+#footer .nav-link-lis .dlbox dl dd a {
+  color: #818181;
+}
+#footer .nav-link-lis .dlbox dl dd a:hover {
+  color: #f10180;
+}
+#footer .nav-link-lis .dlbox dl dd i {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #a1a1a1;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+#footer .nav-link-lis .dlbox:last-child {
+  border: none;
+}
+#footer .nav-link-lis .dlbox:last-child img {
+  width: 90%;
+  height: 90%;
+}
+#footer .cnt {
+  padding-top: 30px;
+  height: 212px;
+}
+#footer .cnt .footer-infor-link {
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+  width: 100%;
+  background-color: #D7237E;
+}
+#footer .cnt .footer-infor-link ul > li {
+  font-size: 12px;
+  vertical-align: top;
+  text-align: center;
+  line-height: 30px;
+  float: left;
+}
+#footer .cnt .footer-infor-link ul > li a {
+  padding: 0 3px;
+  color: #fff;
+}
+#footer .cnt .footer-infor-txt {
+  font-size: 13px;
+  margin: 20px 0;
+}
+#footer .cnt .footer-infor-txt p {
+  color: #858383;
+  line-height: 18px;
+}
+#footer .cnt .footer-infor-txt a {
+  color: #a7a2a2;
+}
+#footer .cnt .footer-infor-txt a:hover {
+  color: #F10180;
+}

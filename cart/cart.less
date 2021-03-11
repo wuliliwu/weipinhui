@@ -1,0 +1,446 @@
+@fense: #F10180;
+
+.container {
+  margin: 0 auto;
+  width: 1000px;
+
+}
+
+// 微元素类
+
+
+#header {
+  height: 80px;
+  border-bottom: 2px solid @fense;
+
+  .cnt {
+    height: 100%;
+    // background-color: pink;
+  }
+
+  .left a {
+    float: left;
+    // display: inline-block;
+    width: 87px;
+    height: 42px;
+    margin-top: 20px;
+    background: url(../comm/images/all.png) -309px -235px no-repeat;
+    // background-size: 80%;
+  }
+
+  .right {
+    float: right;
+
+    ul {
+      margin-top: 20px;
+
+    
+    }
+
+    ul li{
+      font-size: 12px;
+      height: 14px;
+      border-right: 2px solid #b5b5b5;
+      .iconfont {
+          font-size: 14px;
+        vertical-align: middle;
+      }
+    }
+    ul li:last-child,ul li:nth-child(3),ul li:nth-child(2),ul li:nth-child(1) {
+      
+      border: none;
+      
+    }
+
+    ul li {
+      position: relative;
+      float: left;
+      text-align: center;
+      justify-content: space-between;
+      flex: 1;
+      font-size: 12px;
+      padding: 0 10px;
+
+      a {
+        font-size: 12px;
+        color: #B5B5B5;
+
+      }
+    }
+
+    .day_res {
+
+      // width: 282px;
+      height: 24px;
+      float: right;
+      margin:0px 10px 0 0;
+      ul {
+        float: right;
+        li {
+          font-size: 14px;
+          .iconfont {
+            font-size: 16px;
+            vertical-align: top;
+            color:@fense;
+            font-weight: 800;
+
+          }
+        }
+      }
+
+    }
+  }
+}
+
+
+
+#content {
+  // 购物车tab兰
+  
+  .cart-tab{
+    // height: 55px;
+    .special-sell {
+      margin: 30px auto;
+      padding: 0 10px;
+      height: 52;
+      line-height: 55px;
+      // background-color: red;
+      float: left;
+      font-size: 20px;
+      font-weight: 800;
+      color: @fense;
+      border-bottom: 3px solid @fense;
+    }
+
+    // 派送
+      .peisong {
+      height: 25px;
+      width: 100%;
+      // background-color: pink;
+      float: left;
+      margin-bottom: 20px;
+      color: #666;
+      span span::after {
+        position: relative;
+        margin: 0 10px 0 10px;
+        content: ' |';
+        color: #ccc;
+  
+      }
+    }
+  // 商品条目/
+  .product-item {
+    
+    table{
+      width: 100%;
+      border: 1px solid rgb(236, 235, 235);
+
+      border-collapse: collapse;
+     
+      // padding-left: 10px;
+        tr td:nth-child(1) {
+          padding-left: 10px;
+          width: 348px;
+        }
+        tr:nth-child(2) {
+          width: 274px;
+        }
+        tr:nth-child(3) {
+          width: 160px;
+        }
+        
+      .item-title {
+        background-color: #F9F9F9;
+        border: 1px solid rgb(236, 235, 235);
+        height: 35px;
+        width: 100%;
+        td:first-child ~ td{
+          text-align: center;
+          line-height: 35px;
+        }
+        
+      }
+      .ziyin {
+        width: 100%;
+        height: 60px;
+        // background-color: #fff;
+      }
+      .shops {
+
+        width: 100%;
+        height: 100px;
+
+        color: #888;
+        // background-color: #F9F9F9;
+        border-bottom: none;
+        td:first-child ~ td{
+          text-align: center;
+          line-height: 35px;
+        }
+        td:nth-child(2) {
+          color: @fense;
+          // letter-spacing: 4px;
+          font-size: 14px;
+          font-weight: 800;
+        }
+        // 左边商品
+        .shop-item {
+          input[type='checkbox'] {
+            float: left;
+            color: #888;
+            border: 1px solid #ccc;
+            margin: 20px 10px 0 0;
+            
+          }
+          
+          
+          img{
+            width: 74px;
+            height: 74px;
+
+          }
+          .left {
+            float: left;
+           
+          }
+          
+          .right .title{
+            color: #888;
+            text-align: left;
+            float: left;
+            width: 203px;
+            height: 30px;
+            font-size: 13px;
+            padding: 0 15px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            a:hover {
+              color: @fense;
+            }
+          }
+          .middle {
+            float: left;
+            font-weight: 400;
+            width: 203px;
+            height: 15px;
+            padding: 10px 0 0 15px;
+            font-size: 13px;
+          }
+          .btm {
+            float: left;
+            width: 203px;
+            padding: 10px 0 0 15px;
+
+            span {
+              display: inline-block;
+              background-color: #EDF3FF;
+              font-size: 12px;
+              padding: 3px;
+              border-radius: 10px;
+              color: #627DB6;
+            }
+          }
+        }
+
+        // 加减按钮
+        .btn {
+          line-height: 38px;
+          div {
+            height: 100%;
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+           
+            button {
+            float: left;
+            position: relative;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            font-weight: 800;
+            outline: none;
+            text-align: center;
+            color: rgb(172, 171, 171);
+            border: 1px solid #ccc;
+            background-color: rgb(255, 255, 255);
+            :hover {
+            background-color: rgb(255, 255, 255);
+              }
+           
+            }
+          }
+          .count {
+            float: left;
+            width: 24px;
+            height: 22px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            border-left: none;
+            padding: 0 2px;
+            border-right: none;
+
+
+          }
+          span {
+            width: 0;
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+
+          }
+        }
+      }
+
+    }
+  }
+  // 配送
+  .orders-total-bd {
+    margin-top: 40px;
+    width: 100%;
+    height: 112px;
+    position: relative;
+    border: 1px solid rgb(236, 235, 235);
+    // background-color: pink;
+    >a {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      text-align: center;
+      line-height: 35px;
+      display: block;
+      width: 135px;
+      height: 35px;
+      background-color:#fff;
+      border:1px solid @fense;
+      border-radius: 5px;
+      color: @fense;
+    }
+    .right {
+      float: right;
+      margin-top: 20px;
+      p {
+        color: #888888;
+        margin-right: 20px;
+        text-align: right;
+        line-height: 32px;
+        i {
+          margin-left: 50px;
+        }
+      }
+    }
+  }
+  .orders-total-ft {
+    height: 50px;
+    width: 100%;
+    border: 1px solid rgb(236, 235, 235);
+
+    background-color: #F3F3F3;
+
+    .total-ft-left {
+      line-height: 50px;
+      float: left;
+      width: 70%;
+      span {
+        float: right;
+      }
+      
+      
+    }
+    .total-ft-right {
+      float: right;
+      width: 250px;
+      height: 100%;
+      background-color: @fense;
+      button {
+        float: left;
+        outline: none;
+        border: none;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 800;
+        cursor: pointer;
+        background-color: @fense;
+        
+      }
+      button:hover {
+        background-color: #ffffff2c;
+
+        }
+    }
+  }
+// 100%正品保证,七天无理由栏目
+  .c-promises {
+    height: 141px;
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-between;
+    // background-color: pink;
+    div {
+      width: 302px;
+      height: 141px;
+      background-image: url(//shop.vipstatic.com/v2/dist/front/biz/cart/asset/img/te5/commons/sprites-hash-29a8cdc6.png);
+      // background-color: red;
+    }
+    div:nth-child(1) {
+      
+      background-image: url(//shop.vipstatic.com/v2/dist/front/biz/cart/asset/img/te5/commons/sprites-hash-29a8cdc6.png);
+      background-position:  0 -145px;
+     
+    }
+  }
+
+  }
+}
+
+#footer { 
+  text-align: center;
+  border-top: 1px solid #eee;
+  background-color: #fcfcfc;
+  .cnt{
+    padding-top: 30px;
+    height: 212px;
+    .footer-infor-link {
+      display: flex;
+      justify-content: space-around;
+      height: 30px;
+      width: 100%;
+      background-color: #D7237E;
+      ul>li{
+        font-size: 12px;
+        vertical-align: top;
+        text-align: center;
+        line-height: 30px;
+        float: left;
+
+        a {
+          padding: 0 3px;
+          color: #fff;
+        }
+      }
+    }
+    // 底部文本
+    .footer-infor-txt {
+      font-size: 13px;
+      margin:20px 0;
+      p {
+        color: rgb(133, 131, 131);
+        line-height: 18px;
+      }
+      a {
+        color: rgb(167, 162, 162);
+        
+      }
+      a:hover {
+        
+          color: #F10180;
+        
+      }
+    }
+  }
+  
+}

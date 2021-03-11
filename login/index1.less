@@ -1,0 +1,327 @@
+
+
+@colorpink :#f10180;
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+
+.header {
+  height: 100px;
+
+  /* background-color:rgb(153, 221, 195); */
+}
+
+.header a {
+  display: inline-block;
+  width: 124px;
+  height: 61px;
+  margin-top: 20px;
+  background: url(../comm/images/all.png) -309px -77px;
+}
+
+.header .day_res {
+
+  width: 282px;
+  height: 24px;
+  float: right;
+  margin-top: 38px;
+  /* margin-right: 20px; */
+  background-color: pink;
+  background: url(../comm/images/all.png) -4px -38px;
+
+}
+
+.login {
+  height: 650px;
+  /* background-color: rgba(114, 138, 218, 0.185); */
+}
+
+.c-body {
+  background: url(./images/bg.jpg);
+  background-position: top center;
+
+}
+
+.c-body .login_box {
+  width: 360px;
+  /* 不给盒子高度,自己撑开 */
+  /* height: 433px; */
+  border-radius: 2px;
+  float: right;
+  margin-top: 50px;
+  background-color: #fff;
+}
+
+.login_box .top {
+  display: flex;
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.active {
+  color: @colorpink;
+}
+
+.login_box .top a {
+  flex: 1 0 auto;
+  display: block;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.login_box .top a:hover {
+  color: #f10180;
+}
+
+.login_box .top a:first-child::after {
+  content: '|';
+  font-weight: 400;
+  line-height: 50px;
+  float: right;
+  color: #ccc;
+
+
+}
+
+/* 二维码登录 */
+.login .login_middle {
+  padding: 36px 0;
+  height: 190px;
+  text-align: center;
+  position: relative;
+
+}
+
+.login .login_middle img {
+  position: absolute;
+  left: 94px;
+  top: 35px;
+  padding: 10px;
+  border: 1px solid rgb(236, 233, 233)
+}
+
+// .login .login_middle:hover img {
+//   transition: all .5s;
+//   transform: translate(-70px, 0);
+// }
+
+// 手机扫码图片出现/
+.login .login_middle .phone {
+  position: absolute;
+  right: 40px;
+    top: 25px;
+  width: 120px;
+  height: 192px;
+  float: right;
+  opacity: 0;
+   background: url(../comm/images/all.png) -0px -104px  no-repeat;
+  
+}
+
+.login .qcr_text {
+  text-align: center;
+  font-size: 14px;
+}
+
+.login .weixin {
+  width: 300px;
+  height: 40px;
+  margin: 20px auto;
+  line-height: 25px;
+  text-align: center;
+  position: relative;
+
+}
+
+.login .weixin div {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  z-index: 2;
+}
+
+.login .weixin a {
+  display: inline-block;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  background: url(../comm/images/all.png) -580px -161px no-repeat;
+}
+
+.login .weixin span {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+.login .bottom {
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  margin: 0 auto;
+}
+.login .bottom ul {
+  margin-left: 30px;
+}
+.login .bottom ul li {
+  padding: 0 8px;
+  float: left;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+}
+.login .bottom ul li a {
+  font-size: 12px;
+}
+
+
+/* 账户登陆 */
+.login .contact_login .ipt{
+  width: 100%;
+  // height: 270px;
+}
+
+
+
+.footer {
+  height: 77px;
+  text-align: center;
+  line-height: 77px;
+  color: #666;
+
+}
+
+.login .contact_login {
+  // margin: 0 auto;
+  // display: flex;
+  .ipt {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    .code {
+    height: 40px;
+    width: 300px;
+    display: flex;
+    margin-top: 10px;
+    // background-color: pink; 
+    line-height: 40px;
+    justify-content: space-between;
+
+    a {
+      float: 1;
+    }
+    a:hover {
+      color: @colorpink;
+
+    }
+    
+  }
+  button{
+    cursor: pointer;
+    outline: none;
+  }
+  button:hover{
+    transition: all .5s;
+    opacity: .8;
+    background-color: @colorpink;
+  }
+  .icon-yonghu ,.icon-mima {
+    // position: absolute;
+    font-size: 20px;
+    text-indent: 5px;
+  }
+  // .icon-yonghu {
+  //   top: 36px;
+  //   left: 9px;
+  // }
+  // .icon-mima {
+  //   top: 36px;
+  //   left: 9px;
+  // }
+
+
+
+  }
+
+  .ipt input::-webkit-input-placeholder {
+      font-size: 14px;
+      line-height: 40px;
+      // text-indent: 30px;
+      
+  }
+
+  .ipt .text {
+    line-height: 44px;
+    margin-top: 25px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    width: 298px;
+    height: 44px;
+    span {
+      margin-left: 10px;
+    }
+    input{
+      width: 255px;
+      // height: 40px;
+      margin-left: 40px;
+      position: absolute;
+      left: 0;top: 0;
+      height: 46px;
+      outline: none;
+      border: none;
+      background-color: rgba(255, 255, 255, 0);
+      line-height: 46px;
+    }
+
+  }
+  .ipt .pwd{
+    line-height: 44px;
+    margin-top: 25px;
+    margin-top: 25px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    width: 298px;
+    height: 46px;
+    line-height: 46px;
+
+    span {
+      margin-left: 10px;
+    }
+    input{
+      width: 255px;
+      margin-left: 40px;
+      position: absolute;
+      left: 0;top: 0;
+      outline: none;
+      border: none;
+      height: 46px;
+      line-height: 46px;
+    }
+ 
+  }
+
+  button {
+    width: 300px;
+    height: 46px;
+    border: none;
+    border-radius: 2px;
+    background-color: @colorpink;
+    font-size: 18px;
+    color: #fff;
+    margin: 20px 0;
+    letter-spacing: 10px;
+  }
+}
