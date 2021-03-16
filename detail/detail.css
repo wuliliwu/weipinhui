@@ -204,6 +204,9 @@
 .detail-tab ol li {
   display: none;
 }
+.good-detail {
+  position: relative;
+}
 .good-detail .detail-tab {
   width: 100%;
   line-height: 40px;
@@ -228,4 +231,11 @@
 .good-detail .detail-tab ul li:hover {
   color: #f10180;
   border-bottom: 3px solid #f10180;
+}
+.good-detail .tuijian {
+  position: absolute;
+  width: 150px;
+  height: 500px;
+  margin-left: -150px;
+  background-color: pink;
 }
