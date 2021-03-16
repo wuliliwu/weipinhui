@@ -15,7 +15,6 @@
   width: 0;
   height: 100%;
   clear: both;
-  overflow: hidden;
 }
 #box {
   margin: 40px auto;
@@ -129,7 +128,6 @@
 .ltart-clkable .clkable-bottom div {
   width: 312px;
   height: 213px;
-  background-color: pink;
 }
 .ltart-clkable .clkable-bottom div img {
   width: 100%;
@@ -151,6 +149,7 @@
   float: left;
   width: 50%;
   height: 100%;
+  overflow: hidden;
   background: url(//h2.appsimg.com/b.appsimg.com/upload/momin/2020/12/14/86/1607914975921_1200x684_90.jpg) no-repeat;
   background-size: 100% 100%;
 }
@@ -162,7 +161,7 @@
   margin-right: 8px;
   text-align: center;
   background: url(//h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/2021/03/05/32/f057fe1d-46d8-4e3f-911c-78d1fd1dc2d4_420_531_292x368_90.jpg) no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 .lightart-wrap-box .lightart-wrap-box-top .left .goods-item .cover {
   display: inline-block;
@@ -244,7 +243,6 @@
 .lightart-wrap-box .lightart-wrap-box-bottom {
   margin-top: 20px;
   height: 290px;
-  background-color: pink;
 }
 .lightart-wrap-box .lightart-wrap-box-bottom .cnt {
   width: 100%;
@@ -304,7 +302,6 @@
   margin-top: 50px;
   width: 490px;
   height: 235px;
-  background-color: pink;
 }
 .wrap .wrap-box img {
   width: 100%;
@@ -321,4 +318,56 @@
 .wrap .wrap-box p i {
   color: #f10180;
   font-size: 18px;
+}
+.slide {
+  background-color: #fff;
+  position: absolute;
+  width: 1000px;
+  float: left;
+  z-index: 99;
+  display: none;
+}
+.slideleft {
+  background-color: #f10180;
+  float: left;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 105px;
+}
+.slideleft a {
+  color: #fff;
+}
+.slideleft #lul li {
+  display: inline-block;
+  width: 100%;
+  line-height: 32px;
+  text-align: center;
+}
+.slideright {
+  float: left;
+  width: 700px;
+}
+.slideright #oll li {
+  line-height: 32px;
+  text-align: left;
+}
+.lift {
+  position: fixed;
+  top: 230px;
+  right: 0;
+  width: 100px;
+  z-index: 999;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.342);
+  background-color: #f10180;
+}
+.lift li {
+  line-height: 32px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+}
+.lift li:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }

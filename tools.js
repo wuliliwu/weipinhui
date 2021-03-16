@@ -148,3 +148,37 @@ function getLeftTop(obj) {
     }
   }
 }
+
+
+
+ // 封装cookie时间函数
+ function setCookie(key,value,minutes,path) {
+  // path 是一个可选参数
+  var date = new Date()
+  date.setTime(date.getTime()-8*60*60*1000+minutes*60*1000)
+  // 設置cookie
+  var path = path || '/'
+  console.log(date);
+  document.cookie = key+'='+value+';path='+path+';expires='+date;
+}
+
+// 删除cookie
+function removeCookie(key) {
+  setCookie(key,'',-1)
+}
+// 获取cookie
+function getCookie(key) {
+  var result
+  cookies = document.cookie
+  var arr = cookies.split('; ')
+  arr.forEach(ele => {
+    var arr = ele.split('=')
+    // console.log(arr);
+    if(key === arr[0]){
+      result = arr[arr.length-1]
+     
+    }
+  });
+  return result
+
+}

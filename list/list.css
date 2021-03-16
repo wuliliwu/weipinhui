@@ -17,6 +17,13 @@
   min-height: 50px;
   line-height: 50px;
   display: flex;
+  border-bottom: 1px dashed #cccccc;
+}
+.filter-server:last-child {
+  border: none;
+}
+.filter-server .prev {
+  width: 100px;
 }
 .filter-server .middle {
   width: 820px;
@@ -41,4 +48,53 @@
   color: #636363;
   font-weight: 800;
   background-color: #ffffff;
+}
+hgyt .goods-list {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+hgyt .goods-list .item {
+  margin-bottom: 20px;
+  width: 220px;
+  height: 340px;
+  border: 1px solid #ccc;
+  transition: all 0.3s;
+}
+hgyt .goods-list .item:hover {
+  border: 1px solid #f10180;
+}
+hgyt .goods-list .item img {
+  width: 100%;
+}
+hgyt .goods-list .item .good-price {
+  margin-top: 10px;
+  padding: 10px;
+  height: 100px;
+}
+hgyt .goods-list .item .good-price .item-top span {
+  display: inline-block;
+  padding: 0 5px;
+  height: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  border-radius: 10px;
+  background-image: linear-gradient(270deg, #e456ff 0, #ff31a3 100%);
+}
+hgyt .goods-list .item .good-price .item-top b {
+  color: #000;
+  font-size: 24px;
+  text-decoration: none;
+}
+hgyt .goods-list .item .good-price a,
+hgyt .goods-list .item .good-price i {
+  color: #7c7b7b;
+  font-size: 12px;
+}
+hgyt .goods-list .item .item-bottom {
+  font-size: 13px;
+  color: #242424;
 }

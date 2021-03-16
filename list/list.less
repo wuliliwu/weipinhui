@@ -9,37 +9,49 @@
 .filter-groups-cnt {
   border: 1px solid #ccc;
 }
-.filter-title{ 
+
+.filter-title {
   margin-top: 20px;
   height: 50px;
   line-height: 50px;
   // background-color: red;
 }
 
-
 .filter-server {
   min-height: 50px;
   line-height: 50px;
   display: flex;
-  // .prev {
-  //   float: left;
-  // }
+  border-bottom: 1px dashed rgb(204, 204, 204);
+
+  &:last-child {
+    border: none;
+  }
+
+  .prev {
+    width: 100px;
+  }
+
   .middle {
     width: 820px;
     float: right;
+
     .btnClass {
       text-align: center;
+
       button {
         margin: 0 10px;
       }
     }
   }
+
   span {
     // margin-right: 50px;
     margin-left: 30px;
     font-size: 12px;
   }
+
   .next {
+
     // float: right;
     // margin-right: 20px;
     button {
@@ -52,5 +64,79 @@
       font-weight: 800;
       background-color: rgb(255, 255, 255);
     }
+  }
+}
+hgyt
+// 价格综合等等
+// .c-sortbar {
+//   height: 50px;
+//   margin-top: 30px;
+//   background-color: pink;
+
+
+// }
+
+.goods-list {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  // float: left;
+  justify-content: space-between;
+  // margin-right: 20px;
+
+  .item {
+    margin-bottom: 20px;
+    width: 220px;
+    height: 340px;
+    border: 1px solid #ccc;
+    transition: all .3s;
+    &:hover {
+      border: 1px solid #f10180;
+    }
+
+    // background-color: #0f0;
+    img {
+      width: 100%;
+    }
+
+    .good-price {
+      margin-top: 10px;
+      padding: 10px;
+      // width: 100%;
+      height: 100px;
+
+      .item-top span {
+        display: inline-block;
+        padding: 0 5px;
+        height: 20px;
+        color: #fff;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        // vertical-align: baseline;
+        border-radius: 10px;
+        background-image: linear-gradient(270deg, #e456ff 0, #ff31a3 100%);
+      
+      }
+
+      .item-top {
+        b {
+          color: #000;
+        font-size: 24px;
+        text-decoration: none;
+
+      }}
+
+       a ,i{
+        color: rgb(124, 123, 123);
+        font-size: 12px;
+      }
+      
+    }
+    .item-bottom {
+      font-size: 13px;
+      color: rgb(36, 36, 36);
+    }
+
   }
 }

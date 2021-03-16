@@ -3,7 +3,6 @@ header('content-type:text/html;charset=utf-8;');
   $number = $_POST['number'];
   $password = $_POST['password'];
 
-  // echo $number;
   $hostname = 'localhost';
   $name = 'root';
   $pwd = '123456';
@@ -14,25 +13,35 @@ header('content-type:text/html;charset=utf-8;');
   mysqli_query($conn,'set name utf8');
   // 查询是否有重复的用户
   $sql1 = "SELECT * FROM `users` WHERE `number` = '$number'";
-  $row = mysqli_query($conn,$sql1);
-  $res = mysqli_fetch_assoc($row);
+  $sql2 = "SELECT * FROM `users` WHERE `password` = '$password'";
 
-  if ($res) {
-    echo json_encode(
-      [
-        'msg' => [
-          'status' => 0,
-          'message' => '该用户已经存在。'
-        ]
-      ]
-        );
-  }else{
-    mysqli_query($conn,"INSERT INTO `users` VALUES(null,'$number','$password')");
+  $row1 = mysqli_query($conn,$sql1);
+  $row2 = mysqli_query($conn,$sql2);
+
+  $res1 = mysqli_fetch_assoc($row1);
+  $res2 = mysqli_fetch_assoc($row2);
+
+
+  if ($res1 && $res2) {
+    // 就是可以查找到用户
+
     echo json_encode(
       [
         'msg' => [
           'status' => 2,
-          'message' => '注册成功。'
+          'message' => '登陆成功!'
+        ]
+      ]
+        );
+
+  }else{
+    // 用户不存在的时候
+    
+    echo json_encode(
+      [
+        'msg' => [
+          'status' => 0,
+          'message' => '用户名或者密码错误'
         ]
       ]
         );

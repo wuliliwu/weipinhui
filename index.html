@@ -15,7 +15,7 @@
   <div class="box">
     <!-- 头部 -->
     <header class="header container">
-      <a href="./index/index.html"></a>
+      <a href="./index/shouye.html"></a>
       <div class="day_res">
 
       </div>
@@ -64,17 +64,20 @@
             <div class="ipt">
               <div class="text">
                 <span class="icon-yonghu iconfont"></span>
-                <input type="text" placeholder="手机号/用户名邮箱">
+                <input type="text" placeholder="手机号/用户名邮箱" value="15219295349">
               </div>
               <div class="pwd">
                 <input type="password" placeholder="请输入密码">
                 <span class="icon-mima iconfont"></span>
               </div>
+              <div class="remenber">
+                <input type="checkbox" name="" id="">记住用户名
+              </div>
               <div class="code">
                 <a href="javascript:;">验证码登陆</a>
                 <a href="javascript:;">忘记密码?</a>
               </div>
-              <button>登陆</button>
+              <button class="loginBtn">登陆</button>
             </div>
                 <!-- 微信图标 -->
           <div class="weixin">
@@ -111,4 +114,87 @@
 </body>
 <script src="./tools.js"></script>
 <script src="./login/index.js"></script>
+<script src="./jquery.min.js"></script>
+<script src="./chajian/layer/layer.js"></script>
+<script>
+
+// 手机号验证
+var bool1,bool2
+ // 正则验证函数
+ function validate(str, reg) {
+   if (reg.test(str)) {
+     return true
+   } else {
+     return false
+   }
+ }
+ $('input:text').bind('input propertychange', function () {
+   var reg = /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/
+   var str = $(this).val().replace(/[, ]/g, '')
+   bool1 = validate(str, reg)
+ });
+
+ $('input:password').bind('input propertychange', function () {
+   // 强密码正则的要求是只能由数字，字母组成，不能有特殊符号,并且长度限制在6-16位
+   var reg = /^(?=.*[a-zA-Z])(?=.*\d)[^]{6,16}$/
+   var str = $(this).val().replace(/[, ]/g, '')
+   bool2 = validate(str, reg)
+ })
+
+
+
+  $('.loginBtn').click(function() {
+    var number = $(':text').val()
+    var password = $(':password').val()
+    console.log(bool1,bool2);
+    
+    if (bool1&&bool2) {
+      $.ajax({
+         type: "post",
+         url: "./server/login.php",
+         data: {
+           number: number,
+           password: password
+         },
+         dataType: "json",
+         success: function (res) {
+           console.log(res);
+           const {
+             status,
+             message
+           } = res.msg
+           if (status === 2) {
+            layer.msg(message,{
+              icon:1,
+              time:1500
+
+            },function() {
+              // 添加cookie 
+              setCookie('username',$(':text').val(),7200)
+                // 判断是否记住用户名
+                if($('input:checkbox').prop('checked')){
+                    // 存cookie
+                  setCookie('remusername',$(':text').val(),3600*24*7)
+                }
+              window.location.href = './index/shouye.html'
+            });
+           }
+           if (status === 0) {
+             //提示层
+             layer.msg(message);
+          
+           }
+         }
+       });
+      
+    }else{
+      layer.msg('用户名或者密码格式有问题,请重新输入.');
+
+    }
+    
+    
+    
+  })
+
+</script>
 </html>

@@ -1,0 +1,316 @@
+.clearfix::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 100%;
+  clear: both;
+  overflow: hidden;
+}
+
+#box {
+  width: 420px;
+  height: 420px;
+  // border: 1px solid #000;
+  // margin: 200px;
+  position: relative;
+  z-index: 9;
+}
+
+#big {
+  width: 420px;
+  height: 420px;
+  // border: 1px solid #000;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: -9;
+  // left : 460px;
+}
+
+#big img {
+
+  width: 1200px;
+  height: 1200px;
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+
+#mask {
+  width: 150px;
+  height: 150px;
+  // background: transparent;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.3;
+  // display: none;
+  cursor: move;
+}
+
+#small {
+  width: 420px;
+  height: 420px;
+  position: relative;
+}
+
+#small img {
+  // width: 420px;
+  // height: 420px;
+  width: 100%;
+  height: 100%;
+}
+
+#bigImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.btmImg ul {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin-top: 10px;
+  height: 60px;
+  width: 398px;
+  border: 1px solid #ccc;
+  padding-left: 22px;
+}
+
+.btmImg ul .left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  color: rgb(88, 88, 88);
+  font-weight: 800;
+  outline: none;
+  border: 2px solid #ccc;
+}
+
+.btmImg ul .right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  color: rgb(88, 88, 88);
+  font-weight: 800;
+  outline: none;
+  border: 2px solid #ccc;
+}
+
+.btmImg ul li {
+
+  cursor: pointer;
+  float: left;
+  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.btmImg ul li img {
+
+  width: 100%;
+  height: 100%;
+}
+
+.FW-product {
+  margin-top: 40px;
+}
+
+.product-left {
+  float: left;
+  width: 420px;
+
+}
+
+
+.product-right {
+  a {
+    text-transform: uppercase;
+    color: rgb(11, 136, 185);
+    font-size: 20px;
+  }
+
+  float: right;
+
+  .title {
+    width: 550px;
+    line-height: 30px;
+  }
+
+  .product-price {
+    height: 94px;
+    width: 100%;
+    background: url(//b.appsimg.com/upload/momin/2020/08/19/22/1597801542667.png);
+    line-height: 94px;
+
+    .left {
+      float: left;
+      width: 50%;
+      color: #fff;
+
+      span {
+        margin-left: 20px;
+        font-size: 36px;
+
+      }
+
+      b {
+        text-decoration: line-through;
+      }
+    }
+
+    .right {
+      float: right;
+      margin-right: 20px;
+    }
+  }
+}
+
+.product-peisong {
+  table {
+    margin: 20px 0;
+    border-collapse: collapse;
+
+  }
+
+  table tr {
+    color: rgb(139, 139, 139);
+    height: 42px;
+    margin: 5px 0;
+
+    span {
+      display: inline-block;
+      width: 60px;
+      height: 28px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      line-height: 32px;
+      text-align: center;
+    }
+
+    td {
+
+      // border: 1px solid #000;
+      &:first-child {
+        width: 15%;
+      }
+
+      &:last-child {
+        input {
+          width: 40px;
+          height: 28px;
+          text-align: center;
+          border: 1px solid #ccc;
+        }
+
+        button {
+          width: 30px;
+          height: 30px;
+          font-weight: bold;
+          outline: none;
+          cursor: pointer;
+          border: 1px solid #ccc;
+
+        }
+      }
+    }
+
+
+
+  }
+}
+
+.getgood {
+  button {
+    width: 150px;
+    height: 30px;
+    background-color: #f10180;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgb(233, 233, 233);
+  }
+}
+
+
+
+/* 面包屑导航 */
+.toast-nav {
+  ul li {
+    float: left;
+    margin-right: 10px;
+    line-height: 32px;
+
+    &:hover a {
+      color: #f10180;
+    }
+
+    &:last-child {
+      color: #f10180;
+    }
+  }
+}
+
+
+
+// 商品详情
+
+.good-detail .detail-tab ul .active {
+  border-bottom: 3px solid #f10180;
+}
+// .show{
+//   display: block;
+// }
+.detail-tab ol li.active{
+  display:block;
+}
+.detail-tab ol li{
+  display:none;
+}
+
+.good-detail {
+  .detail-tab {
+    // height: 40px;
+    width: 100%;
+    line-height: 40px;
+    margin-top: 100px;
+    border: 1px solid #ccc;
+    // border-bottom: 3px solid #666;
+
+    // background-color: pink;
+    ul {
+      display: flex;
+      justify-content: left;
+      height: 40px;
+      border-bottom: 1px solid #ccc;
+      align-items: center;
+
+      li {
+        border-right: 1px solid #ccc;
+        padding: 0 20px;
+        border-bottom: 3px solid transparent;
+
+        &:last-child {
+          border-right: none;
+        }
+        &:hover {
+          color: #f10180;
+          border-bottom: 3px solid #f10180;
+
+        }
+      }
+    }
+
+  
+  }
+}

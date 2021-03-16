@@ -160,6 +160,12 @@
   justify-content: top;
   align-items: center;
 }
+.login .contact_login .ipt .remenber {
+  height: 40px;
+  width: 300px;
+  line-height: 40px;
+  text-align: left;
+}
 .login .contact_login .ipt .code {
   height: 40px;
   width: 300px;
